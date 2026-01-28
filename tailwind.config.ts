@@ -13,6 +13,9 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -57,6 +60,32 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        status: {
+          pending: "hsl(var(--status-pending))",
+          "pending-foreground": "hsl(var(--status-pending-foreground))",
+          progress: "hsl(var(--status-progress))",
+          "progress-foreground": "hsl(var(--status-progress-foreground))",
+          done: "hsl(var(--status-done))",
+          "done-foreground": "hsl(var(--status-done-foreground))",
+        },
+        priority: {
+          low: "hsl(var(--priority-low))",
+          "low-foreground": "hsl(var(--priority-low-foreground))",
+          medium: "hsl(var(--priority-medium))",
+          "medium-foreground": "hsl(var(--priority-medium-foreground))",
+          high: "hsl(var(--priority-high))",
+          "high-foreground": "hsl(var(--priority-high-foreground))",
+        },
+        overdue: {
+          DEFAULT: "hsl(var(--overdue))",
+          foreground: "hsl(var(--overdue-foreground))",
+          bg: "hsl(var(--overdue-bg))",
+        },
+        stat: {
+          "pending-bg": "hsl(var(--stat-pending-bg))",
+          "progress-bg": "hsl(var(--stat-progress-bg))",
+          "done-bg": "hsl(var(--stat-done-bg))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -80,10 +109,32 @@ export default {
             height: "0",
           },
         },
+        "fade-in": {
+          from: {
+            opacity: "0",
+            transform: "translateY(10px)",
+          },
+          to: {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
+        },
+        "slide-up": {
+          from: {
+            opacity: "0",
+            transform: "translateY(20px)",
+          },
+          to: {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-in": "fade-in 0.3s ease-in-out",
+        "slide-up": "slide-up 0.3s ease-out",
       },
     },
   },
